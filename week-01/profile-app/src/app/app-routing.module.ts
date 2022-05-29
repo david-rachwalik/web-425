@@ -1,8 +1,8 @@
 /*
- * Title: app.module.ts
+ * Title: app-routing.module.ts
  * Author: David Rachwalik
  * Date: 2022/05/29
- * Description: Main application module
+ * Description: Main routing module
  */
 
 import { NgModule } from '@angular/core';
