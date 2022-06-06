@@ -21,21 +21,11 @@ Add [jQuery](https://jquery.com) and [Bootstrap](https://getbootstrap.com) to th
 npm i jquery bootstrap
 ```
 
-### Week 01 - 'ts-examples' Commands ([migrate tslint to eslint](https://github.com/palantir/tslint/issues/4534))
-
-Install TypeScript, linting, and Node type support
+Install linting
 
 ```bash
-npm i -D typescript eslint @types/node
+npm i -D eslint
 ```
-
-Generate a new tsconfig.json file
-
-```bash
-tsc --init
-```
-
-### Week 01 - 'profile-app' Commands
 
 Generate a new Angular component
 
