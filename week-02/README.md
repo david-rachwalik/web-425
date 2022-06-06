@@ -27,6 +27,12 @@ Install linting
 npm i -D eslint
 ```
 
+Install [font awesome](https://www.npmjs.com/package/@fortawesome/angular-fontawesome)
+
+```bash
+ng add @fortawesome/angular-fontawesome
+```
+
 Generate a new Angular component
 
 ```bash
