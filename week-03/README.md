@@ -15,12 +15,12 @@ Generate a new Angular application
 ng new <project-name>
 ```
 
-Add [jQuery](https://jquery.com), [Bootstrap](https://getbootstrap.com), [Bootstrap Icons](https://icons.getbootstrap.com)
+Add [jQuery](https://jquery.com), [Bootstrap 4](https://getbootstrap.com/docs/4.6), [Bootstrap Icons](https://icons.getbootstrap.com)
 
 - _reminder_: add to `angular.json` file in 'build.options.styles' and 'build.options.scripts'
 
 ```bash
-npm i jquery bootstrap bootstrap-icons
+npm i jquery bootstrap@4.6.1 bootstrap-icons
 ```
 
 Generate a new Angular component
