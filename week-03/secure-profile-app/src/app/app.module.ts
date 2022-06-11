@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MyDetailsComponent } from './my-details/my-details.component';
 import { MyImageComponent } from './my-image/my-image.component';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MyImageComponent } from './my-image/my-image.component';
     MyImageComponent,
     MyDetailsComponent,
     HomeComponent,
+    SigninComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
