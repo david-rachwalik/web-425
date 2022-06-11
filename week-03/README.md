@@ -28,3 +28,9 @@ Generate a new Angular component
 ```bash
 ng g c <component-name>
 ```
+
+Generate a new Angular guard
+
+```bash
+ng g g <component-name>
+```
