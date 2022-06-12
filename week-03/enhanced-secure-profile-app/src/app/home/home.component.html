@@ -18,7 +18,8 @@
     <h2>Exercise 3.3 - Passing Data to Routes, Part 2</h2>
     <br /><br />
 
-    <div class="row" *ngIf="isLoggedIn; else showError">
+    <!-- <div class="row" *ngIf="isLoggedIn; else showError"> -->
+    <div class="row">
         <div class="col-sm-4">
             <app-my-image></app-my-image>
         </div>
@@ -27,7 +28,7 @@
         </div>
     </div>
 
-    <ng-template #showError>
+    <!-- <ng-template #showError>
         <div class="row">
             <div class="col-sm-12">
                 <h4 class="alert alert-danger">
@@ -35,5 +36,5 @@
                 </h4>
             </div>
         </div>
-    </ng-template>
+    </ng-template> -->
 </div>

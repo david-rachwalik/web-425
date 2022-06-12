@@ -1,3 +1,10 @@
+/*
+ * Title: signin.component.ts
+ * Author: David Rachwalik
+ * Date: 2022/06/11
+ * Description: Sign-in component
+ */
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
