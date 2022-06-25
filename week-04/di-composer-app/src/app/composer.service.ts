@@ -1,16 +1,17 @@
 /*
- * Title: composer.class.ts
+ * Title: composer.service.ts
  * Author: David Rachwalik
- * Date: 2022/06/11
- * Description: Composer class
+ * Date: 2022/06/25
+ * Description: Composer service
  */
 
+import { Injectable } from '@angular/core';
 import { IComposer } from './composer.interface';
 
-export class Composer implements IComposer {
-  composerId: number;
-  fullName: string;
-  genre: string;
+@Injectable({
+  providedIn: 'root',
+})
+export class ComposerService {
   composers: Array<IComposer>;
 
   constructor() {
