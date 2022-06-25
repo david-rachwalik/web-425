@@ -13,5 +13,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  assignment = 'Exercise 4.2 - Inversion of Control and Dependency Injection';
+  assignment = 'Exercise 4.3 - Handling Events with Observables';
 }

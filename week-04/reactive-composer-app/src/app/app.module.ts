@@ -1,11 +1,12 @@
 /*
  * Title: app.module.ts
  * Author: David Rachwalik
- * Date: 2022/06/11
+ * Date: 2022/06/25
  * Description: Main application module
  */
 
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
@@ -23,7 +24,13 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     ComposerDetailsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
