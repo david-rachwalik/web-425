@@ -12,12 +12,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BookDetailsDialogComponent } from './book-details-dialog/book-details-dialog.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
@@ -29,6 +31,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AboutComponent,
     ContactComponent,
     BookListComponent,
+    BookDetailsDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     FlexLayoutModule,
     MatIconModule,
     MatTableModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
