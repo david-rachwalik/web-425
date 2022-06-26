@@ -13,5 +13,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  assignment = 'Exercise 5.3 - Navigation and Layout';
+  assignment = 'Exercise 5.3 - Data Tables';
 }
