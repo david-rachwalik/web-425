@@ -15,10 +15,16 @@ Generate a new Angular application
 ng new <project-name>
 ```
 
-Install Angular Material ("Custom" theme)
+Install Angular Material ("Custom" theme, 'y' typography, 'y' animations)
 
 ```bash
 ng add @angular/material
+```
+
+Install [Angular Flex-Layout](https://github.com/angular/flex-layout) ([v10](https://www.npmjs.com/package/@angular/flex-layout/v/10.0.0-beta.32))
+
+```bash
+npm i @angular/flex-layout@10.0.0-beta.32
 ```
 
 ---
