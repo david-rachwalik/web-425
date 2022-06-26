@@ -9,7 +9,7 @@ Bellevue University | Web Development [Degree](http://www.bellevue.edu/degrees/b
 
 ### Week 05 Commands
 
-Generate a new Angular application
+Generate a new Angular application ([RxJS](https://www.learnrxjs.io))
 
 ```bash
 ng new <project-name>
