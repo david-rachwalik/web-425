@@ -12,7 +12,7 @@
                     <th scope="col">Genre</th>
                 </tr>
             </thead>
-            <tbody *ngFor="let composer of composers">
+            <tbody *ngFor="let composer of composers | async">
                 <tr>
                     <td scope="row"><a routerLink="/composer-details/{{ composer.composerId }}">{{ composer.composerId }}</a></td>
                     <td scope="row">{{ composer.fullName }}</td>

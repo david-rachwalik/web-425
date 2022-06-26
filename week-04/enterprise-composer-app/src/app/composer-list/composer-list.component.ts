@@ -7,6 +7,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { IComposer } from '../composer.interface';
 import { ComposerService } from '../composer.service';
@@ -17,7 +18,7 @@ import { ComposerService } from '../composer.service';
   styleUrls: ['./composer-list.component.scss'],
 })
 export class ComposerListComponent implements OnInit {
-  composers: Array<IComposer>;
+  composers: Observable<IComposer[]>;
   txtSearchControl = new FormControl('');
 
   constructor(private composerService: ComposerService) {
@@ -30,7 +31,8 @@ export class ComposerListComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  // Filter composers by name
   filterComposers(name: string): void {
-    alert(name);
+    this.composers = this.composerService.filterComposers(name);
   }
 }
