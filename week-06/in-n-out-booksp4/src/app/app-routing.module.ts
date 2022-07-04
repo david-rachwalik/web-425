@@ -1,7 +1,7 @@
 /*
  * Title: app-routing.module.ts
  * Author: David Rachwalik
- * Date: 2022/06/26
+ * Date: 2022/07/03
  * Description: App routing module
  */
 
@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { ContactComponent } from './contact/contact.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: 'wishlist',
+    component: WishlistComponent,
   },
 ];
 

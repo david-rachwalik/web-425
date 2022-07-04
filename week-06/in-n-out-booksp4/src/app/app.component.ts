@@ -1,7 +1,7 @@
 /*
  * Title: app.component.ts
  * Author: David Rachwalik
- * Date: 2022/06/26
+ * Date: 2022/07/03
  * Description: App component
  */
 
@@ -13,5 +13,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  assignment = 'Assignment 5.4 - Dialogs';
+  assignment = 'Exercise 6.2 - Input/Output Properties, Part 1';
 }

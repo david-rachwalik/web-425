@@ -1,13 +1,14 @@
 /*
  * Title: app.module.ts
  * Author: David Rachwalik
- * Date: 2022/06/26
+ * Date: 2022/07/03
  * Description: App module
  */
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,12 +16,16 @@ import { AppComponent } from './app.component';
 import { BookDetailsDialogComponent } from './book-details-dialog/book-details-dialog.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { ContactComponent } from './contact/contact.component';
+import { WishlistCreateComponent } from './wishlist-create/wishlist-create.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -32,6 +37,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     ContactComponent,
     BookListComponent,
     BookDetailsDialogComponent,
+    WishlistComponent,
+    WishlistCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +52,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatIconModule,
     MatTableModule,
     MatDialogModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
