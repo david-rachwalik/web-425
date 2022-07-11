@@ -6,7 +6,7 @@
  */
 
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { SignInService } from '../sign-in.service';
@@ -25,24 +25,35 @@ export class SignInComponent implements OnInit {
     private cookieService: CookieService,
     private fb: FormBuilder,
     private signinService: SignInService
-  ) {}
+  ) {
+    console.log(this.cookieService.get('session_user'));
+  }
 
   ngOnInit(): void {
     this.signinForm = this.fb.group({
-      studentId: '',
+      studentId: [
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.pattern('^[0-9]*$'),
+        ]),
+      ],
     });
+  }
+
+  get form() {
+    return this.signinForm.controls;
   }
 
   onSubmit(): void {
     const formValues = this.signinForm.value;
     const studentId = parseInt(formValues.studentId, 10);
-    // Assign student ID to cookie if valid or return error
+
     if (this.signinService.validate(studentId)) {
       this.cookieService.set('session_user', studentId.toString(), 1);
       this.router.navigate(['/']);
     } else {
-      this.errorMessage =
-        'The student ID you entered is invalid, please try again.';
+      this.errorMessage = `The student ID you entered is invalid, please try again.`;
     }
   }
 }
