@@ -12,7 +12,7 @@ Bellevue University | Web Development [Degree](http://www.bellevue.edu/degrees/b
 Generate a new Angular application ([RxJS](https://www.learnrxjs.io))
 
 ```bash
-ng new <project-name>
+ng new <project-name> --strict
 ```
 
 Install Angular Material ("Deep Purple/Amber" theme, 'y' typography, 'y' animations)
@@ -25,6 +25,12 @@ Install [Angular Flex-Layout](https://github.com/angular/flex-layout) ([v10](htt
 
 ```bash
 npm i @angular/flex-layout@10.0.0-beta.32
+```
+
+Install [NGX Cookie Service](https://www.npmjs.com/package/ngx-cookie-service) ([v12.0.3](https://www.npmjs.com/package/ngx-cookie-service/v/12.0.3))
+
+```bash
+npm i ngx-cookie-service@12.0.3
 ```
 
 ---

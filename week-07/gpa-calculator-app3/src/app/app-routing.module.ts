@@ -1,7 +1,7 @@
 /*
  * Title: app-routing.module.ts
  * Author: David Rachwalik
- * Date: 2022/07/03
+ * Date: 2022/07/10
  * Description: App routing module
  */
 
@@ -11,6 +11,8 @@ import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { BaseLayoutComponent } from './base-layout/base-layout.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SignInGuard } from './sign-in.guard';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 const routes: Routes = [
   {
@@ -22,6 +24,7 @@ const routes: Routes = [
         component: HomeComponent,
       },
     ],
+    canActivate: [SignInGuard],
   },
   {
     path: 'session',
@@ -30,6 +33,10 @@ const routes: Routes = [
       {
         path: 'not-found',
         component: NotFoundComponent,
+      },
+      {
+        path: 'sign-in',
+        component: SignInComponent,
       },
     ],
   },
