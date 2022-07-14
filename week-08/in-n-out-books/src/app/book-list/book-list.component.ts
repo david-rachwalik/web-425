@@ -1,13 +1,12 @@
 /*
  * Title: book-list.component.ts
  * Author: David Rachwalik
- * Date: 2022/06/26
+ * Date: 2022/07/14
  * Description: Book List component
  */
 
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Observable } from 'rxjs';
 import { BookDetailsDialogComponent } from '../book-details-dialog/book-details-dialog.component';
 import { IBook } from '../book.interface';
 import { BooksService } from '../books.service';
@@ -18,18 +17,43 @@ import { BooksService } from '../books.service';
   styleUrls: ['./book-list.component.scss'],
 })
 export class BookListComponent implements OnInit {
-  books: Observable<IBook[]>;
-  header: Array<string> = ['isbn', 'title', 'numOfPages', 'authors'];
+  books: Array<IBook> = [];
   book: IBook;
 
   constructor(private booksService: BooksService, private dialog: MatDialog) {
-    this.books = this.booksService.getBooks();
+    this.booksService.getBooks().subscribe((res) => {
+      console.log(res);
+      for (const key in res) {
+        if (res.hasOwnProperty(key)) {
+          console.log(res[key].details);
+
+          let authors = [];
+          if (res[key].details.authors) {
+            authors = res[key].details.authors.map((author) => {
+              return author.name;
+            });
+          }
+
+          this.books.push({
+            isbn: res[key].details.isbn_13
+              ? res[key].details.isbn_13
+              : res[key].details.isbn_10,
+            title: res[key].details.title,
+            description: res[key].details.subtitle
+              ? res[key].details.subtitle
+              : 'N/A',
+            numOfPages: res[key].details.number_of_pages,
+            authors,
+          });
+        }
+      }
+    });
   }
 
   ngOnInit(): void {}
 
   showBookDetails(isbn: string): void {
-    this.book = this.booksService.getBook(isbn);
+    this.book = this.books.find((book) => book.isbn === isbn);
 
     const dialogRef = this.dialog.open(BookDetailsDialogComponent, {
       data: {

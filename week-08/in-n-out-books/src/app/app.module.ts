@@ -1,7 +1,7 @@
 /*
  * Title: app.module.ts
  * Author: David Rachwalik
- * Date: 2022/07/03
+ * Date: 2022/07/14
  * Description: App module
  */
 
@@ -19,6 +19,7 @@ import { ContactComponent } from './contact/contact.component';
 import { WishlistCreateComponent } from './wishlist-create/wishlist-create.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 
+import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -27,6 +28,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -55,6 +57,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
+    HttpClientModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
